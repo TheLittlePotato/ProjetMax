@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageMaitre.master.cs" Inherits="ProjetMax.PageMaitre"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1 style="width: 846px">
+            <asp:ImageButton runat="server" ID="ElmoBouton" AlternateText="Accueil" ImageAlign="Middle" ImageUrl="~/Images/elmo.png" onclick="ElmoBouton_Click" Height="153px" Width="156px"></asp:ImageButton>
+                <asp:Label ID="LabelTitre" runat="server" Text="<%$ Resources:Titre %>"></asp:Label></h1>
+            <asp:ImageButton runat="server" ID="bouton1" AlternateText="Bouton 1" ImageAlign="Middle" ImageUrl="<%$ Resources:Bouton1 %>" OnClick="bouton1_Click"></asp:ImageButton>
+            <asp:ImageButton runat="server" ID="bouton2" AlternateText="Bouton 2" ImageAlign="Middle" ImageUrl="<%$ Resources:Bouton2 %>" OnClick="bouton2_Click"></asp:ImageButton>
+            <asp:ImageButton runat="server" ID="bouton3" AlternateText="Bouton 3" ImageAlign="Middle" ImageUrl="<%$ Resources:Bouton3 %>" OnClick="bouton3_Click"></asp:ImageButton>
+            <br />
+            Credit Card: <asp:TextBox ID="TextBoxCarte" runat="server"></asp:TextBox>
+            <asp:Button ID="ButtonCarte" runat="server" Text="Stock" onclick="ButtonCarte_Click"/>
+            <br />
+            Credit Card: <asp:Label ID="LabelCarte" runat="server" Text=""></asp:Label>
+            <br /><hr />
+        </header>
+        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
